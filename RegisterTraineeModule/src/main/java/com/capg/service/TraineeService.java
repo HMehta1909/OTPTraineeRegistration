@@ -43,7 +43,7 @@ public class TraineeService {
 	}
 
 	private Trainee setTrainer(Trainee trainee) {
-		Trainer trainer = restTemplate.getForObject("http://TRAINER-MICROSERVICE/Trainer/getTrainerObj/"+trainee.getTrainerName(), Trainer.class );
+		Trainer trainer = restTemplate.getForObject("http://TRAINER-MICROSERVICE:8082/Trainer/getTrainerObj/"+trainee.getTrainerName(), Trainer.class );
 		trainee.setTrainer(trainer);
 		return trainee;
 	}

@@ -1,0 +1,7 @@
+
+FROM openjdk:latest
+
+LABEL maintainer="javaguides.net"
+ADD ./build/libs/RegisterTraineeModule-0.0.1-SNAPSHOT.jar otptrainee.jar
+
+ENTRYPOINT ["java", "-jar", "otptrainee.jar"]
